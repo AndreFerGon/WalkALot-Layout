@@ -58,7 +58,7 @@ public class HomeFragment extends Fragment {
     }
 
     private ProgressBar homeProgressBar;
-
+    private ObjectAnimator animatebar;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -69,9 +69,11 @@ public class HomeFragment extends Fragment {
         homeProgressBar = view.findViewById(R.id.home_progress_bar);
 
         // Start your animation
-        ObjectAnimator animatebar = ObjectAnimator.ofInt(homeProgressBar, "progress", 0, 100);
+
+        animatebar = ObjectAnimator.ofInt(homeProgressBar, "progress", 0, 75);
         animatebar.setDuration(2000);
         animatebar.start();
+
 
         return view;
     }
