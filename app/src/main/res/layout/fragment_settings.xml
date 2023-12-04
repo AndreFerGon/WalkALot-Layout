@@ -3,17 +3,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsFragment">
+    tools:context=".SettingsFragment"
+    android:background="@color/black">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/userinfo"
+        android:background="@android:color/transparent"
+        />
+
+    <Button
+        android:id="@+id/btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Settings Fragment"
-        android:textColor="#FAF8F8"
-        android:textSize="26dp"
-        tools:text="Settings Fragment" />
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="300dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="Save"
+        />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/gender"
+        android:background="@android:color/transparent"
+        />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="350dp"
+        android:src="@drawable/age"
+        android:background="@android:color/transparent"
+        />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="350dp"
+        android:layout_marginRight="100dp"
+        android:src="@drawable/weight"
+        android:background="@android:color/transparent"
+        />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="100dp"
+        android:src="@drawable/height"
+        android:background="@android:color/transparent"
+        />
+
+
+
 
 
 </FrameLayout>
