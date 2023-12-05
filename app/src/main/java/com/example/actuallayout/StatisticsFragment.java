@@ -34,7 +34,7 @@ public class StatisticsFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    private List<String> xValues = Arrays.asList("Sunday","Monday","Tuesday", "Wednesday","Thursday");
+    private List<String> xValues = Arrays.asList("Sunday","Monday","Tuesday", "Wednesday","Thursday","Friday","Saturday");
 
 
     // TODO: Rename and change types of parameters
@@ -90,15 +90,17 @@ public class StatisticsFragment extends Fragment {
         barChart.getAxisRight().setDrawLabels(false);
 
         ArrayList<BarEntry> entries = new ArrayList<>();
-        entries.add(new BarEntry(0,45f));
-        entries.add(new BarEntry(1,80f));
-        entries.add(new BarEntry(2,65f));
-        entries.add(new BarEntry(3,38f));
-        entries.add(new BarEntry(4,70f));
+        entries.add(new BarEntry(0,7000f));
+        entries.add(new BarEntry(1,5000f));
+        entries.add(new BarEntry(2,10000f));
+        entries.add(new BarEntry(3,15000f));
+        entries.add(new BarEntry(4,20000f));
+        entries.add(new BarEntry(5,9000f));
+        entries.add(new BarEntry(6,12000f));
 
         YAxis yAxis = barChart.getAxisLeft();
         yAxis.setAxisMaximum(0f);
-        yAxis.setAxisMaximum(100f);
+        yAxis.setAxisMaximum(20000f);
         yAxis.setAxisLineWidth(2f);
         yAxis.setTextColor(Color.WHITE);
         yAxis.setAxisLineColor(Color.BLACK);
