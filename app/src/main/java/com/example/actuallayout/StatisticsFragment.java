@@ -17,8 +17,10 @@ import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
+import com.github.mikephil.charting.formatter.ValueFormatter;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -109,6 +111,9 @@ public class StatisticsFragment extends Fragment {
         BarDataSet dataSet = new BarDataSet(entries,"Subjects");
         /*dataSet.setColors(ColorTemplate.MATERIAL_COLORS);*/
 
+        DecimalFormat decimalFormat = new DecimalFormat("0.##");
+
+
         BarData barData = new BarData(dataSet);
         barChart.setData(barData);
 
@@ -124,5 +129,8 @@ public class StatisticsFragment extends Fragment {
         barChart.getDescription().setTextColor(Color.WHITE);
         barData.setValueTextColor(Color.WHITE);
         barData.setValueTextSize(10f);
+        barChart.animateXY(1000, 1000);
+
     }
 }
+
