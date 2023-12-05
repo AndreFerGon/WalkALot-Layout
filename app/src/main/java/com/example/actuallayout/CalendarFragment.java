@@ -1,12 +1,20 @@
 package com.example.actuallayout;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CalendarView;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import java.util.Calendar;
+import android.widget.TextView;
+import android.util.Log;
+import android.graphics.Color;
+
+
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -67,30 +75,41 @@ public class CalendarFragment extends Fragment {
 
 
 import android.widget.CalendarView;
+import android.widget.Toast;
+
 public class CalendarFragment extends Fragment {
 
-    private CalendarView calendarView;
+    CalendarView calendarView;
+    Calendar calendar;
+    TextView textViewSelectedDate;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_calendar, container, false);
 
-        // Initialize the CalendarView
         calendarView = view.findViewById(R.id.calendarView);
+        textViewSelectedDate = view.findViewById(R.id.textViewSelectedDate);
+        calendar = Calendar.getInstance();
 
-        // Set a listener to handle date selection
+
+
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
-            public void onSelectedDayChange(CalendarView view, int year, int month, int dayOfMonth) {
-                // Handle the selected date
-                // You can implement custom logic here
+            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int day) {
+                String selectedDate = day + "/" + (month + 1) + "/" + year;
+                textViewSelectedDate.setText("Selected Date: " + selectedDate);
+
+                Log.d("CalendarFragment", "Selected Date: " + selectedDate);
+
+
             }
         });
 
         return view;
     }
+
+
 }
 
 

@@ -5,19 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".CalendarFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <!--
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Calendar Fragment"
-        android:textColor="#FDFCFC"
-        android:textSize="26dp"
-        tools:text="Calendar Fragment" />
-
-     -->
-
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="fill_parent"
@@ -27,5 +14,15 @@
         android:theme="@style/CalenderViewCustom"
         android:weekDayTextAppearance="@style/CalenderViewWeekCustomText" />
 
-
+    <!-- TextView to display the selected date -->
+    <TextView
+        android:id="@+id/textViewSelectedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date: "
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="450dp"
+        android:background="@color/black"
+        android:textColor="@color/white"
+       />
 </FrameLayout>
