@@ -84,7 +84,7 @@ public class StatisticsFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(View view,  Bundle savedInstanceState) {
         // Setup any handles to view objects here
         BarChart barChart = (BarChart) getView().findViewById(R.id.chart);
         barChart.getAxisRight().setDrawLabels(false);
