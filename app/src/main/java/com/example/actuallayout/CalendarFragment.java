@@ -98,9 +98,9 @@ public class CalendarFragment extends Fragment {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int day) {
                 String selectedDate = day + "/" + (month + 1) + "/" + year;
-                textViewSelectedDate.setText("Selected Date: " + selectedDate);
+                textViewSelectedDate.setText(selectedDate);
 
-                Log.d("CalendarFragment", "Selected Date: " + selectedDate);
+                Log.d("CalendarFragment", selectedDate);
 
 
             }
