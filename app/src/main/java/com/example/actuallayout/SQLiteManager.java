@@ -6,6 +6,10 @@ import android.database.sqlite.SQLiteDatabase;
 
 import android.database.sqlite.SQLiteOpenHelper;
 
+
+
+
+
 public class SQLiteManager extends SQLiteOpenHelper {
     private static SQLiteManager sqLiteManager;
     private static final String DATABASE_NAME = "StepCounterDB";
