@@ -41,7 +41,10 @@ public class SignUpActivity extends AppCompatActivity {
 
                 if (newRowId != -1) {
                     Toast.makeText(SignUpActivity.this, "Registration successful!", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(SignUpActivity.this, MainActivity.class));
+                    // Pass userId to MainActivity
+                    Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                    intent.putExtra("userId", newRowId);
+                    startActivity(intent);
                 } else {
                     Toast.makeText(SignUpActivity.this, "Registration failed!", Toast.LENGTH_SHORT).show();
                 }

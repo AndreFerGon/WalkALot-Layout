@@ -20,6 +20,9 @@ import com.example.actuallayout.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding binding;
+    private long mUserId; // Add a member variable to store the userId
+    private String mParam1;
+    private String mParam2;
 
     @SuppressLint("NonConstantResourceId")
     @Override
@@ -27,7 +30,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
                 binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        replaceFragment(new HomeFragment());
+
+        // Retrieve userId from Intent
+        mUserId = getIntent().getLongExtra("userId", -1);
+// Pass userId to the initial fragment (HomeFragment in this case)
+        replaceFragment(HomeFragment.newInstance(mParam1, mParam2, mUserId));
         binding.bottomNavigationView.setOnItemSelectedListener(item -> {
 
             if(item.getItemId()==R.id.home){
