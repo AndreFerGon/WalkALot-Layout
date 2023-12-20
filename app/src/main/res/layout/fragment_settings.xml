@@ -116,10 +116,6 @@
         android:layout_marginTop="500dp"
         android:layout_marginLeft="75dp"
         android:background="#f2d596"
-        android:minValue="100"
-        android:maxValue="200"
-        android:value="150"
-        android:defaultValue="150"
         app:layout_constraintEnd_toEndOf="@+id/heightImageView"
         app:layout_constraintStart_toStartOf="@+id/heightImageView"
         app:layout_constraintTop_toBottomOf="@+id/heightImageView" />
@@ -127,16 +123,16 @@
 
 
 
-       <ImageView
-           android:id="@+id/ageImageView"
-           android:layout_width="80dp"
-           android:layout_height="80dp"
-           android:layout_gravity="center_horizontal"
-           android:layout_marginRight="0dp"
-           android:layout_marginTop="370dp"
-           android:src="@drawable/age"
-           android:background="@android:color/transparent"
-           />
+    <ImageView
+        android:id="@+id/ageImageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="370dp"
+        android:src="@drawable/age"
+        android:background="@android:color/transparent"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -163,33 +159,29 @@
              android:padding="10dp" />
   -->
 
-      <NumberPicker
-          android:id="@+id/birthPick"
-          android:layout_width="wrap_content"
-          android:layout_height="140dp"
-          android:layout_marginTop="500dp"
-          android:layout_marginLeft="175dp"
-          android:background="#f2d596"
-          android:minValue="10"
-          android:maxValue="100"
-          android:value="20"
-          android:defaultValue="20"
-          app:layout_constraintEnd_toEndOf="@+id/ageImageView"
-          app:layout_constraintStart_toStartOf="@+id/ageImageView"
-          app:layout_constraintTop_toBottomOf="@+id/ageImageView" />
+    <NumberPicker
+        android:id="@+id/agePick"
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="175dp"
+        android:background="#f2d596"
+        app:layout_constraintEnd_toEndOf="@+id/ageImageView"
+        app:layout_constraintStart_toStartOf="@+id/ageImageView"
+        app:layout_constraintTop_toBottomOf="@+id/ageImageView" />
 
 
 
-      <ImageView
-          android:id="@+id/weightImageView"
-          android:layout_width="70dp"
-          android:layout_height="70dp"
-          android:layout_gravity="center_horizontal"
-          android:layout_marginTop="370dp"
-          android:layout_marginRight="-100dp"
-          android:src="@drawable/weight"
-          android:background="@android:color/transparent"
-          />
+    <ImageView
+        android:id="@+id/weightImageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="370dp"
+        android:layout_marginRight="-100dp"
+        android:src="@drawable/weight"
+        android:background="@android:color/transparent"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -216,21 +208,17 @@
             android:padding="10dp" />
 
     -->
-          <NumberPicker
-              android:id="@+id/weightPick"
-              android:layout_width="wrap_content"
-              android:layout_height="140dp"
-              android:layout_marginTop="500dp"
-              android:layout_marginLeft="275dp"
-              android:background="#f2d596"
-              android:minValue="30"
-              android:maxValue="200"
-              android:value="60"
-              android:defaultValue="60"
-              app:layout_constraintEnd_toEndOf="@+id/weightImageView"
-              app:layout_constraintHorizontal_bias="0.517"
-              app:layout_constraintStart_toStartOf="@+id/weightImageView"
-              app:layout_constraintTop_toBottomOf="@+id/weightImageView" />
+    <NumberPicker
+        android:id="@+id/weightPick"
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="275dp"
+        android:background="#f2d596"
+        app:layout_constraintEnd_toEndOf="@+id/weightImageView"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="@+id/weightImageView"
+        app:layout_constraintTop_toBottomOf="@+id/weightImageView" />
 
 
 
@@ -248,3 +236,4 @@
 
 
 </FrameLayout>
+

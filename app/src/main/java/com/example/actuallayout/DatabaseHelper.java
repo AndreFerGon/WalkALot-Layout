@@ -17,7 +17,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // Create the user table
-        db.execSQL("CREATE TABLE users (id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, password TEXT)");
+        db.execSQL("CREATE TABLE users (id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, password TEXT, gender TEXT, height INTEGER, age INTEGER, weight INTEGER)");
         // Insert default users
         db.execSQL("INSERT INTO users (username, password) VALUES ('user1', 'pass1')");
         db.execSQL("INSERT INTO users (username, password) VALUES ('user2', 'pass2')");
@@ -35,6 +35,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put("username", username);
         values.put("password", password);
+
+        // Insert the new user into the database
+        long newRowId = db.insert("users", null, values);
+
+        // Close the database connection
+        db.close();
+
+        return newRowId;
+    }
+
+    public long insertSettings(String gender, int height, int weight, int age) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("gender", gender);
+        values.put("height", height);
+        values.put("weight", weight);
+        values.put("age", age);
 
         // Insert the new user into the database
         long newRowId = db.insert("users", null, values);
