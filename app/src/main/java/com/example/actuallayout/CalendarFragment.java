@@ -92,7 +92,12 @@ public class CalendarFragment extends Fragment {
         textViewSelectedDate = view.findViewById(R.id.textViewSelectedDate);
         calendar = Calendar.getInstance();
 
+        calendarView.setDate(System.currentTimeMillis(), false, true);
 
+        String initialDate = calendar.get(Calendar.DAY_OF_MONTH) + "/"
+                + (calendar.get(Calendar.MONTH) + 1) + "/"
+                + calendar.get(Calendar.YEAR);
+        textViewSelectedDate.setText(initialDate);
 
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
@@ -111,6 +116,3 @@ public class CalendarFragment extends Fragment {
 
 
 }
-
-
-
