@@ -29,7 +29,6 @@ public class SettingsFragment extends Fragment {
     private static final String STATE_HEIGHT = "state_height";
     private static final String STATE_AGE = "state_age";
 
-
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
